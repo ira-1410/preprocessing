@@ -23,8 +23,7 @@ for index, row in names_file.iterrows():
         # display as plot
         plt.figure(figsize=(25, 10))
         librosa.display.specshow(log_mel_spec, x_axis="time", y_axis="mel", sr=sample_rate, fmax=20000, cmap='magma')
-        # plt.colorbar(format="%+2.f dB")
-        # plt.colorbar()
+        #plt.colorbar(format="%+2.f dB")
         plt.axis('off')
 
         # save the spectrogram as png
