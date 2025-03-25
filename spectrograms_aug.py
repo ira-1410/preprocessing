@@ -32,11 +32,11 @@ def spec_augment(og_spec, freq_max_percent=0.15, time_max_percent=0.2):
 
 
 
-file= pd.read_csv('/Users/ashna/Desktop/train.csv')
+file= pd.read_csv('~/Desktop/train.csv')
 names_file = pd.DataFrame(file)
 
 for index, row in names_file.iterrows():
-    pathname = "/Users/ashna/Desktop/raw data/" + row['label'] +"/" + row['names']
+    pathname = "~/Desktop/raw data/" + row['label'] +"/" + row['names']
     audio, sample_rate = librosa.load(pathname, sr=None, mono=False)
     timeshift = np.roll(audio, random.randint(360000, 1080000), axis=1)
 
@@ -52,6 +52,6 @@ for index, row in names_file.iterrows():
         plt.axis('off')
 
         # save the spectrogram as png
-        save_path = "/Users/ashna/Desktop/training_aug/" + row['label']+ "/" + row['names'][:-4] + str(x + 1) + " aug.png"
+        save_path = "~/Desktop/training_aug/" + row['label']+ "/" + row['names'][:-4] + str(x + 1) + " aug.png"
         plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
 
