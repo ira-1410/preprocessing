@@ -7,11 +7,11 @@ import pandas as pd
 # run the program twice, once for ~/Desktop/test then for ~/Desktop/training_norm
 
 # load the song
-file= pd.read_csv('/Users/ashna/Desktop/train.csv')
+file= pd.read_csv('~/Desktop/train.csv')
 names_file = pd.DataFrame(file)
 
 for index, row in names_file.iterrows():
-    pathname = "/Users/ashna/Desktop/raw data/" + row['label'] +"/" + row['names']
+    pathname = "~/Desktop/raw data/" + row['label'] +"/" + row['names']
 
     audio, sample_rate = librosa.load(pathname, sr=None, mono=False)
 
@@ -27,7 +27,7 @@ for index, row in names_file.iterrows():
         plt.axis('off')
 
         # save the spectrogram as png
-        save_path = "/Users/ashna/Desktop/training_norm/" + row['label']+ "/" + row['names'][:-4] + str(x + 1) + ".png"
+        save_path = "~/Desktop/training_norm/" + row['label']+ "/" + row['names'][:-4] + str(x + 1) + ".png"
         plt.savefig(save_path, bbox_inches='tight', pad_inches=0)
         print(row['names'] + " saved successfully to " + row['label'])
 
