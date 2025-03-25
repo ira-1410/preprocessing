@@ -6,3 +6,5 @@ Methods:
 1. Basic Sequential CNN
 2. DenseNet
 3. Other classification methods (Logistic Regression, KNN, Support Vector Machine, XGBoost)
+
+Note- Model training, testing, prediction was done using Google Colab in order to facilitate feedback from research mentor. Files are saved directly from Google Colab and may have formatting issues.
